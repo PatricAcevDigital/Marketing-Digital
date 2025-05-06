@@ -3,61 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afiliados Hotmart</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .producto { border: 1px solid #ddd; padding: 10px; margin: 10px; width: 300px; text-align: center; }
-        .producto img { width: 100%; }
-    </style>
+    <title>Mi Página de Afiliados</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Agregar Producto</h2>
-    <form id="productoForm">
-        <input type="text" id="nombre" placeholder="Nombre del producto" required>
-        <input type="text" id="imagen" placeholder="URL de imagen" required>
-        <input type="text" id="enlace" placeholder="URL de afiliado" required>
-        <button type="submit">Agregar</button>
-    </form>
 
-    <h2>Lista de Productos</h2>
-    <div id="productos"></div>
+    <header>
+        <h1>Descubre lo que el mundo tiene para ti. ¿Cuál será tu próxima gran oportunidad?</h1>
+    </header>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            cargarProductos();
-        });
+    <section id="formulario">
+        <h2>Agregar Nuevo Producto</h2>
+        <form id="productoForm">
+            <input type="text" id="nombre" placeholder="Nombre del producto" required>
+            <input type="url" id="imagen" placeholder="URL de la imagen" required>
+            <input type="url" id="codigo" placeholder="Código de divulgación" required>
+            <select id="categoria">
+                <option value="digital">Digital</option>
+                <option value="bebes">Bebés y Niños</option>
+                <option value="mamas">Mamás Abrazadas</option>
+                <option value="salud">Alimentación y Salud</option>
+                <option value="deporte">Deporte Saludable</option>
+            </select>
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </section>
 
-        document.getElementById("productoForm").addEventListener("submit", function(event) {
-            event.preventDefault();
+    <section id="productos">
+        <h2>Productos</h2>
+        <div id="productosContainer"></div>
+        <div id="paginacion"></div>
+    </section>
 
-            let nombre = document.getElementById("nombre").value;
-            let imagen = document.getElementById("imagen").value;
-            let enlace = document.getElementById("enlace").value;
-
-            let producto = { nombre, imagen, enlace };
-            let productos = JSON.parse(localStorage.getItem("productos")) || [];
-            productos.push(producto);
-            localStorage.setItem("productos", JSON.stringify(productos));
-
-            mostrarProducto(producto);
-            document.getElementById("productoForm").reset();
-        });
-
-        function mostrarProducto(producto) {
-            let nuevoProducto = `
-                <div class="producto">
-                    <img src="${producto.imagen}" alt="${producto.nombre}">
-                    <h3>${producto.nombre}</h3>
-                    <a href="${producto.enlace}" target="_blank">Comprar ahora</a>
-                </div>
-            `;
-            document.getElementById("productos").innerHTML += nuevoProducto;
-        }
-
-        function cargarProductos() {
-            let productos = JSON.parse(localStorage.getItem("productos")) || [];
-            productos.forEach(mostrarProducto);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
