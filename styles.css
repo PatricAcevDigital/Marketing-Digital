@@ -85,25 +85,28 @@ nav ul li a {
     border-radius: 5px;
 }
 /* Estilo para la seccion de productos */
+
 #productoForm {
+    width: 400px; /* Ajusta el ancho */
+    margin: auto; /* Centra el formulario */
     display: flex;
-    flex-direction: column; /* Alinea los campos uno debajo del otro */
-    align-items: center; /* Centra los elementos */
-    width: 400px; /* Aumenta el ancho */
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; /* Más espacio interior */
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #productoForm input, #productoForm select {
-    width: 100%; /* Hace que los cuadros sean más anchos */
-    height: 50px; /* Aumenta la altura */
-    font-size: 16px; /* Hace el texto más grande */
-    margin-bottom: 10px; /* Espacio entre los campos */
-    padding: 10px; /* Más cómodo para escribir */
-    border-radius: 5px; /* Bordes más suaves */
+    width: 100%; /* Hace los cuadros más anchos */
+    height: 55px; /* Aumenta la altura */
+    font-size: 18px; /* Texto más grande */
+    margin-bottom: 15px; /* Más espacio entre los campos */
+    padding: 10px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+}
 }
 
 #productoForm button {
