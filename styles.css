@@ -20,7 +20,43 @@ body {
     padding: 0;
     text-align: center;
 }
+/* Fondo naranja para la sección de productos */
+#productos {
+    background-color: #FFA500; /* Naranja */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 20px auto;
+}
 
+/* Productos alineados */
+#listaProductos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Estilo de cada producto */
+li {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    width: 150px; /* Tamaño más compacto */
+}
+
+/* Solo imagen y nombre */
+li img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+li p {
+    font-size: 14px;
+    font-weight: bold;
+}
 /* Encabezado azul */
 header {
     background-color: #0073e6;
