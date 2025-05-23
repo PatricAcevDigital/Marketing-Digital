@@ -1,21 +1,4 @@
-/* Estilo general */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* Encabezado azul */
-header {
-    background-color: #0073e6;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-}
-
-/* Sección de productos con fondo naranja */
+/* Fondo naranja para la sección de productos */
 #productos {
     background-color: #FFA500; /* Naranja */
     padding: 20px;
@@ -24,66 +7,34 @@ header {
     margin: 20px auto;
 }
 
-/* Estilo de cada producto */
+/* Organización de productos en filas de cuatro */
 #listaProductos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Cuatro productos por fila */
     gap: 15px;
     justify-content: center;
+    padding: 20px;
 }
 
+/* Estilo de cada producto */
 li {
     background: white;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     border: 1px solid #ddd;
-    width: 160px; /* Tamaño más compacto */
+    width: 160px; /* Tamaño compacto */
 }
 
-/* Imágenes de productos */
+/* Imágenes de productos como enlaces */
 li img {
-    max-width: 80px;
+    max-width: 100px;
     border-radius: 5px;
+    cursor: pointer; /* Indica que la imagen es un enlace */
 }
 
 /* Nombre del producto */
 li p {
     font-size: 14px;
     font-weight: bold;
-}
-
-/* Estilo del formulario en el administrador */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 90%;
-    margin: 20px auto;
-    padding: 15px;
-    background-color: #FFA500; /* Naranja */
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-input {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Botón */
-button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #cc0000;
 }
