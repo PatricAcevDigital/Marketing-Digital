@@ -2,13 +2,11 @@
     {
         "nombre": "Ejemplo Producto 1",
         "imagen": "https://ejemplo.com/img1.jpg",
-        "urlAfiliado": "https://ejemplo.com/afiliado1",
-        "categoria": "Digital"
+        "urlAfiliado": "https://ejemplo.com/afiliado1"
     },
     {
         "nombre": "Ejemplo Producto 2",
         "imagen": "https://ejemplo.com/img2.jpg",
-        "urlAfiliado": "https://ejemplo.com/afiliado2",
-        "categoria": "Salud"
+        "urlAfiliado": "https://ejemplo.com/afiliado2"
     }
 ]
