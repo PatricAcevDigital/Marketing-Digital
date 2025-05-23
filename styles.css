@@ -19,7 +19,28 @@ header {
 header p {
     font-size: 16px;
 }
+/* Estilo del formulario en el administrador */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFA500; /* Naranja */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
+/* Campos de entrada más grandes */
+input {
+    width: 90%;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 /* Sección de productos con fondo dinámico */
 #productos {
     padding: 40px;
