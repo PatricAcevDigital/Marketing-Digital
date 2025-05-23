@@ -6,21 +6,16 @@ body {
     padding: 0;
     text-align: center;
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+
+/* Encabezado azul */
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-/* Fondo naranja para la sección de productos */
+
+/* Sección de productos con fondo naranja */
 #productos {
     background-color: #FFA500; /* Naranja */
     padding: 20px;
@@ -29,216 +24,62 @@ body {
     margin: 20px auto;
 }
 
-/* Productos alineados */
-#listaProductos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    justify-content: center;
-}
-
 /* Estilo de cada producto */
-li {
-    background: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    border: 1px solid #ddd;
-    width: 150px; /* Tamaño más compacto */
-}
-
-/* Solo imagen y nombre */
-li img {
-    max-width: 100px;
-    border-radius: 5px;
-}
-
-li p {
-    font-size: 14px;
-    font-weight: bold;
-}
-/* Encabezado azul */
-header {
-    background-color: #0073e6;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-}
-
-/* Sección de productos con fondo naranja */
-#productos {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #FFA500; /* Naranja */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Formulario alineado verticalmente */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-input {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Botón */
-button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #cc0000;
-}
-
-/* Estilo para mostrar los productos en filas de cuatro */
 #listaProductos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     justify-content: center;
-    padding: 20px;
 }
 
 li {
     background: white;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
     border: 1px solid #ddd;
-}
-
-li img {
-    max-width: 100px;
-    border-radius: 5px;
-}
-/* Encabezado azul */
-header {
-    background-color: #0073e6;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-}
-
-/* Sección de productos con fondo naranja */
-#productos {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #FFA500; /* Naranja */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Formulario alineado verticalmente */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-input {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Botón */
-button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #cc0000;
-}
-
-/* Estilo para mostrar los productos en filas de cuatro */
-#listaProductos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    justify-content: center;
-    padding: 20px;
-}
-
-li {
-    background: white;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-li img {
-    max-width: 100px;
-    border-radius: 5px;
-}
-/* Encabezado */
-header {
-    background-color: #0073e6;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-}
-
-/* Sección de productos */
-#productos {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
-    padding: 15px;
-    background: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    width: 160px; /* Tamaño más compacto */
 }
 
 /* Imágenes de productos */
 li img {
-    max-width: 150px;
+    max-width: 80px;
     border-radius: 5px;
 }
 
-/* Botón de eliminación en index.html */
+/* Nombre del producto */
+li p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Estilo del formulario en el administrador */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #FFA500; /* Naranja */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botón */
 button {
     background-color: #ff4d4d;
     color: white;
     border: none;
     padding: 10px;
-    margin-top: 10px;
     cursor: pointer;
     border-radius: 5px;
 }
