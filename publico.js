@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 const item = document.createElement("li");
 
                 const enlace = document.createElement("a");
-                enlace.href = producto.urlAfiliado; // Enlace al vendedor
-                enlace.target = "_blank"; // Abre en nueva pestaña
-                enlace.rel = "noopener noreferrer"; // Seguridad
+                enlace.href = producto.urlAfiliado;
+                enlace.target = "_blank";
+                enlace.rel = "noopener noreferrer";
 
                 const imagen = document.createElement("img");
                 imagen.src = producto.imagen;
                 imagen.alt = producto.nombre;
-                imagen.width = 100; // Tamaño compacto
+                imagen.width = 100;
 
                 enlace.appendChild(imagen);
                 item.appendChild(enlace);
