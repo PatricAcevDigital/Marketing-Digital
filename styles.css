@@ -1,4 +1,21 @@
-/* Fondo naranja para la sección de productos */
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Encabezado azul */
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Fondo naranja para los productos */
 #productos {
     background-color: #FFA500; /* Naranja */
     padding: 20px;
@@ -7,7 +24,7 @@
     margin: 20px auto;
 }
 
-/* Organización de productos en filas de cuatro */
+/* Organización en filas de cuatro */
 #listaProductos {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Cuatro productos por fila */
@@ -23,14 +40,14 @@ li {
     border-radius: 5px;
     text-align: center;
     border: 1px solid #ddd;
-    width: 160px; /* Tamaño compacto */
+    width: 160px;
 }
 
-/* Imágenes de productos como enlaces */
+/* Imágenes de productos con enlaces */
 li img {
     max-width: 100px;
     border-radius: 5px;
-    cursor: pointer; /* Indica que la imagen es un enlace */
+    cursor: pointer;
 }
 
 /* Nombre del producto */
