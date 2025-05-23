@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Productos</h1>
+    </header>
+
+    <section>
+        <form id="productoForm">
+            <input type="text" id="nombre" placeholder="Nombre del producto" required>
+            <input type="url" id="imagen" placeholder="URL de la imagen" required>
+            <input type="url" id="codigo" placeholder="URL del producto afiliado" required>
+            <input type="text" id="categoria" placeholder="Categoría" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </section>
+
+    <section id="productos">
+        <h2>Lista de Productos</h2>
+        <ul id="listaProductos"></ul>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>
