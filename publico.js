@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 const item = document.createElement("li");
 
                 const enlace = document.createElement("a");
-                enlace.href = producto.urlAfiliado;
-                enlace.target = "_blank";
-                enlace.rel = "noopener noreferrer";
+                enlace.href = producto.urlAfiliado; // Enlace al vendedor
+                enlace.target = "_blank"; // Abre en nueva pestaña
+                enlace.rel = "noopener noreferrer"; // Seguridad
 
                 const imagen = document.createElement("img");
                 imagen.src = producto.imagen;
                 imagen.alt = producto.nombre;
-                imagen.width = 200;
+                imagen.width = 100; // Tamaño compacto
 
                 enlace.appendChild(imagen);
                 item.appendChild(enlace);
@@ -24,10 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 const nombre = document.createElement("p");
                 nombre.innerHTML = `<strong>${producto.nombre}</strong>`;
                 item.appendChild(nombre);
-
-                const categoria = document.createElement("p");
-                categoria.textContent = `Categoría: ${producto.categoria}`;
-                item.appendChild(categoria);
 
                 listaProductos.appendChild(item);
             });
