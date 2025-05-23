@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(productos => {
             listaProductos.innerHTML = "";
             productos.forEach(producto => {
-                const item = document.createElement("li");
+                const item = document.createElement("div");
+                item.classList.add("producto");
 
                 const enlace = document.createElement("a");
                 enlace.href = producto.urlAfiliado;
@@ -16,13 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 const imagen = document.createElement("img");
                 imagen.src = producto.imagen;
                 imagen.alt = producto.nombre;
-                imagen.width = 100;
+
+                const nombre = document.createElement("p");
+                nombre.textContent = producto.nombre;
 
                 enlace.appendChild(imagen);
                 item.appendChild(enlace);
-
-                const nombre = document.createElement("p");
-                nombre.innerHTML = `<strong>${producto.nombre}</strong>`;
                 item.appendChild(nombre);
 
                 listaProductos.appendChild(item);
