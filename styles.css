@@ -1,57 +1,62 @@
 /* Estilo general */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-/* Encabezado azul */
+/* Encabezado */
 header {
-    background-color: #0073e6;
+    background: linear-gradient(90deg, #0073e6, #FFA500);
     color: white;
-    padding: 20px;
-    font-size: 24px;
+    padding: 30px;
+    font-size: 22px;
+    border-bottom: 5px solid #FFA500;
 }
 
-/* Fondo naranja para los productos */
+header p {
+    font-size: 16px;
+}
+
+/* Sección de productos con fondo dinámico */
 #productos {
-    background-color: #FFA500; /* Naranja */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 90%;
-    margin: 20px auto;
+    padding: 40px;
+    background: linear-gradient(90deg, #FFA500, #ffcc70);
 }
 
-/* Organización en filas de cuatro */
+/* Diseño de productos en tarjetas */
 #listaProductos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro productos por fila */
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    gap: 20px;
 }
 
-/* Estilo de cada producto */
-li {
+/* Estilo de cada tarjeta */
+.producto {
     background: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    border: 1px solid #ddd;
-    width: 160px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Imágenes de productos con enlaces */
-li img {
-    max-width: 100px;
+.producto:hover {
+    transform: scale(1.05);
+}
+
+/* Imágenes de productos */
+.producto img {
+    max-width: 100%;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 /* Nombre del producto */
-li p {
-    font-size: 14px;
+.producto p {
+    font-size: 16px;
     font-weight: bold;
+    margin-top: 10px;
 }
