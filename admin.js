@@ -1,76 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const productoForm = document.getElementById("productoForm");
-    const listaProductos = document.getElementById("listaProductos");
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Productos</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Productos</h1>
+    </header>
 
-    function cargarProductos() {
-        listaProductos.innerHTML = "";
-        const productosGuardados = JSON.parse(localStorage.getItem("productos")) || [];
-        productosGuardados.forEach((producto, index) => agregarProducto(producto, index));
-    }
+    <section id="admin">
+        <form id="productoForm">
+            <input type="text" id="nombre" placeholder="Nombre del producto" required>
+            <input type="url" id="urlAfiliado" placeholder="URL de divulgación" required>
+            <input type="url" id="imagen" placeholder="URL de la imagen" required>
+            <input type="text" id="categoria" placeholder="Categoría" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
 
-    productoForm.addEventListener("submit", function(event) {
-        event.preventDefault();
+        <h2>Lista de Productos</h2>
+        <ul id="listaProductos"></ul>
+    </section>
 
-        const nombre = document.getElementById("nombre").value;
-        const imagen = document.getElementById("imagen").value;
-        const urlAfiliado = document.getElementById("codigo").value;
-        const categoria = document.getElementById("categoria").value;
-
-        if (!nombre || !imagen || !urlAfiliado || !categoria) {
-            alert("Todos los campos son obligatorios.");
-            return;
-        }
-
-        const producto = { nombre, imagen, urlAfiliado, categoria };
-
-        let productosGuardados = JSON.parse(localStorage.getItem("productos")) || [];
-        productosGuardados.push(producto);
-        localStorage.setItem("productos", JSON.stringify(productosGuardados));
-
-        agregarProducto(producto, productosGuardados.length - 1);
-        productoForm.reset();
-    });
-
-    function agregarProducto(producto, index) {
-        const item = document.createElement("li");
-
-        const enlace = document.createElement("a");
-        enlace.href = producto.urlAfiliado;
-        enlace.target = "_blank";
-        enlace.rel = "noopener noreferrer";
-
-        const imagen = document.createElement("img");
-        imagen.src = producto.imagen;
-        imagen.alt = producto.nombre;
-        imagen.width = 200;
-
-        enlace.appendChild(imagen);
-        item.appendChild(enlace);
-
-        const nombre = document.createElement("p");
-        nombre.innerHTML = `<strong>${producto.nombre}</strong>`;
-        item.appendChild(nombre);
-
-        const categoria = document.createElement("p");
-        categoria.textContent = `Categoría: ${producto.categoria}`;
-        item.appendChild(categoria);
-
-        const botonEliminar = document.createElement("button");
-        botonEliminar.textContent = "Eliminar";
-        botonEliminar.addEventListener("click", function() {
-            eliminarProducto(index);
-        });
-
-        item.appendChild(botonEliminar);
-        listaProductos.appendChild(item);
-    }
-
-    function eliminarProducto(index) {
-        let productosGuardados = JSON.parse(localStorage.getItem("productos")) || [];
-        productosGuardados.splice(index, 1);
-        localStorage.setItem("productos", JSON.stringify(productosGuardados));
-        cargarProductos();
-    }
-
-    cargarProductos();
-});
+    <script src="admin.js"></script>
+</body>
+</html>
