@@ -1,14 +1,8 @@
 [
     {
-        "nombre": "Activa los Poderes de Tu Mente",
+        "nombre": "Ejemplo Producto 1",
         "imagen": "https://ejemplo.com/img1.jpg",
         "urlAfiliado": "https://ejemplo.com/afiliado1",
-        "reseña": "Descubre cómo potenciar tu mente y alcanzar tus metas."
-    },
-    {
-        "nombre": "Ejemplo Producto 2",
-        "imagen": "https://ejemplo.com/img2.jpg",
-        "urlAfiliado": "https://ejemplo.com/afiliado2",
-        "reseña": "Una herramienta esencial para mejorar tu rendimiento diario."
+        "categoria": "Categoría 1"
     }
 ]
