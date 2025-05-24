@@ -1,0 +1,58 @@
+/* Estilo general */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #0073e6, #FFA500);
+    color: white;
+    padding: 30px;
+    font-size: 22px;
+    border-bottom: 5px solid #FFA500;
+}
+
+/* Sección de productos */
+#productos {
+    padding: 40px;
+    background: linear-gradient(90deg, #FFA500, #ffcc70);
+}
+
+/* Organización en filas de cuatro */
+#listaProductos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Diseño de cada tarjeta */
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+/* Imágenes de productos */
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Nombre del producto */
+.producto p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
