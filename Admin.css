@@ -1,0 +1,68 @@
+/* Estilo general */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #0073e6, #FFA500);
+    color: white;
+    padding: 30px;
+    font-size: 22px;
+    border-bottom: 5px solid #FFA500;
+}
+
+/* Sección de administración */
+#admin {
+    padding: 40px;
+    background: white;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos de entrada */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botón */
+button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Lista de productos */
+#listaProductos {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#listaProductos li {
+    background: #FFA500;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: white;
+}
