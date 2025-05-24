@@ -40,6 +40,7 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Animación al pasar el cursor */
 .producto:hover {
     transform: scale(1.05);
 }
@@ -48,6 +49,7 @@ header {
 .producto img {
     max-width: 100%;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Nombre del producto */
@@ -55,4 +57,12 @@ header {
     font-size: 16px;
     font-weight: bold;
     margin-top: 10px;
+    text-align: center;
+}
+
+/* Reseña debajo del nombre */
+.reseña {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
 }
