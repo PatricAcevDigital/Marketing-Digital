@@ -21,9 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 const nombre = document.createElement("p");
                 nombre.textContent = producto.nombre;
 
+                const reseña = document.createElement("p");
+                reseña.classList.add("reseña");
+                reseña.textContent = producto.reseña;
+
                 enlace.appendChild(imagen);
                 item.appendChild(enlace);
                 item.appendChild(nombre);
+                item.appendChild(reseña);
 
                 listaProductos.appendChild(item);
             });
